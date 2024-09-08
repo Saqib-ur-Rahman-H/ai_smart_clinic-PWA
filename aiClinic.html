@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Clinic Appointment System</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./aiClinic.css">
+    <link rel="manifest" href="./manifest.json">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./service-worker.js')
+            .then((registration) => {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, (error) => {
+                console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+    }
+</script>
+</head>
+<body>
+
+    <div id="heading">
+        Smart Clinic
+    </div>
+    <div class="container">
+        <h2>Press The Button to start the scan</h2>
+        <button type="button" id="scanButton">Scan</button>
+
+        <img id="scanImg" src="./Visual_Library_ Photo.gif" alt="scanning" style="width:100%; margin: 20px 0px;">
+
+        <div id="result" style="display:none">
+            <h2>Diagnosis:</h2>
+            <p id="diagnosis"></p>
+            <h2>Suggested Medicines:</h2>
+            <p id="medicines"></p>
+            <h2>Dos and Don'ts:</h2>
+            <p id="dosAndDonts"></p>
+        </div>
+
+        <div id="purchasePrompt">
+            <p id="purchaseMessage"></p>
+            <button id="purchaseYes">Yes, Purchase Now</button>
+            <button id="purchaseNo">No, Thank You</button>
+        </div>
+
+        <div id="paymentSection">
+            <h2>Payment Information</h2>
+            <form id="paymentForm">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 1234 5678" required 
+                       pattern="\d{4} \d{4} \d{4} \d{4}" title="Card number must be in the format: 1234 5678 1234 5678">
+        
+                <label for="cardExpiry">Expiry Date (MM/YY):</label>
+                <input type="text" id="cardExpiry" placeholder="MM/YY" required 
+                       pattern="\d{2}/\d{2}" title="Expiry date must be in the format: MM/YY">
+        
+                <label for="cardCVC">CVC:</label>
+                <input type="text" id="cardCVC" placeholder="123" required 
+                       pattern="\d{3}" maxlength="3" title="CVC must be a 3-digit number">
+        
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>        
+
+        <div id="billSection">
+            <h2>Bill Details:</h2>
+            <p id="billDetails"></p>
+            <p id="billingTotal"></p>
+        </div>
+
+        <div id="thankYouMessage"></div>
+    </div>
+
+    <div id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+    <div id="projectBy">By: Mysha Zameera</div>
+
+</body>
+<script src="./aiClinic.js"></script>
+</html>
