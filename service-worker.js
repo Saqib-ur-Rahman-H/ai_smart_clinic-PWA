@@ -2,7 +2,7 @@ self.addEventListener('install', (event) => {
     console.log('Service Worker installing.');
     event.waitUntil(
         caches.open('static-v1').then((cache) => {
-            return cache.addAll(['./', './index.html', './aiClinic.css', './aiClinic.js', './aiHelthCare.jpg', './Visual_Library_ Photo.gif','./aiHelthCare192x192.png','./aiHelthCare152x152.png','./aiHelthCare96x96.png','./desktop-screenshot.png','./mobile-screenshot.png']);
+            return cache.addAll(['./', './index.html', './aiClinic.css', './aiClinic.js', './images/aiHelthCare.jpg', './images/Visual_Library_ Photo.gif','./images/aiHelthCare192x192.png','./images/aiHelthCare152x152.png','./images/aiHelthCare96x96.png','./images/desktop-screenshot.png','./images/mobile-screenshot.png']);
         })
     );
 });

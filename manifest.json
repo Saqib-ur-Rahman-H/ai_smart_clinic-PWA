@@ -8,19 +8,19 @@
     "description": "AI-powered clinic appointment and diagnostic system",
     "icons": [
       {
-        "src": "./aiHelthCare192x192.png",
+        "src": "./images/aiHelthCare192x192.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any"
       },
       {
-        "src": "./aiHelthCare152x152.png",
+        "src": "./images/aiHelthCare152x152.png",
         "sizes": "152x152",
         "type": "image/png",
         "purpose": "any"
       },
       {
-        "src": "./aiHelthCare96x96.png",
+        "src": "./images/aiHelthCare96x96.png",
         "sizes": "96x96",
         "type": "image/png",
         "purpose": "any"
@@ -28,12 +28,12 @@
     ],
     "screenshots": [
         {
-          "src": "./desktop-screenshot.png",
+          "src": "./images/desktop-screenshot.png",
           "sizes": "2566x1612",
           "form_factor": "wide"
         },
         {
-          "src": "./mobile-screenshot.png",
+          "src": "./images/mobile-screenshot.png",
           "sizes": "1118x1792"
         }
       ]
