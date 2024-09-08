@@ -175,7 +175,7 @@ button#purchaseYes {
 }
 #projectBy{
     bottom: 0;
-    position: absolute;
+    position: fixed;
     font-size: 24px;
     text-align: right;
     width: -webkit-fill-available;
